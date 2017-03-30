@@ -14,13 +14,13 @@ var totalString = function(input){
   //inputArray = [5,2,3,1]
 
   for(var i=0; i < inputArray.length; i+=1){
-    if(i === 0 && inputArray[i] != 0){
+    if(i === 0){
       numeralArray = ["I", "V", "X"];
-    }else if(i === 1 && inputArray[i] != 0){
+    }else if(i === 1){
       numeralArray = ["X", "L", "C"];
-    }else if(i === 2 && inputArray[i] != 0){
+    }else if(i === 2){
       numeralArray = ["C","D","M"];
-    }else if(i === 3 && inputArray[i] != 0){
+    }else if(i === 3){
        numeralArray = ["M"];
     }
     totalArray.push(processString(inputArray[i], numeralArray));
@@ -57,7 +57,7 @@ var processString = function(input, array){
 
 var validateInput = function(input){
   var valid = true;
-  if (input.search(/[^1-9]/) === 0){
+  if (input.search(/[^\d]/g) != -1){
     valid = false;
   } else if(parseInt(input) > 3999 || parseInt(input) < 1){
     valid = false;
