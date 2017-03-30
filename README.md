@@ -16,13 +16,14 @@ _This program allows a user to enter any number between 1 and 3999 and receive a
 
 ## Expected Behaviour/Specs
 
-  1. input: 1 - 9, output I - IX,
-  2. input: 10 - 90, output: X - XC,
-  3. input: 100 - 900, output: C - CM,
-  4. if user inputs 0's, treat that number of 0's as placeholders
-  5. interpret string of numbers as arrayed numbers. Each element indexed as 0, 1, 2, 3 to correspond with 1, 10, 100, 1000;
-  6. Concatenate all outputs into total final numeral.
-  7. validate user input, to ensure code only operates on numbers between 1-3999
+  1. if the user inputs any number from 1-9 they will be shown its corresponding Roman numerals. The pairs are {1:I,2:II,3:III,4:IV,5:V,6:VI,7:VII,8VIII:,9:IX}
+  2. if the user inputs any number from 10-90 they will be shown its corresponding Roman numeral. The pairs are {10:X,20:XX,30:XXX,40:XL,50:L,60:LX,70:LXX,80:LXXX:,90:XC}
+  3. if the user inputs any number from 100-900 they will be shown its corresponding Roman numeral. The pairs are {100:C,200:CC,300:CCC,400:CD,500:C,600:DC,700:DCC,800:DCCC:,900:CM}
+  4. if the user inputs any number from 1000-3000, they will be shown its corresponding Roman numeral. The pairs are {1000:M,2000:MM,3000:MMM}
+  5. when the user enters a number which includes a combination of numbers from different bases, each digit is interpreted separately, using the same logic, substituting that base's specific set of character example: 444 would be interpreted in three steps as 4 using 100s characters(CD), 4 using 10s characters(XL) and 4 using 1s characters(IV) for a final string of CDXLIV
+  6. if user inputs 0's, ignore those numbers and move on to the next conversion
+  7. concatenate all outputs into total final numeral.
+  8. validate user input, to ensure code only operates on numbers between 1-3999
 
 ## Known Bugs
 
