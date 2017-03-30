@@ -18,25 +18,21 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Expected Behaviour/Specs
 
-_  1. input: 1, output: I
+_  1. input: 1 - 9, output I - IX,
 
-  2. input: 2, output: II
+  2. input: 10 - 90, output: X - XC,
 
-  3. input: 3, output: III
+  3. input: 100 - 900, output: C - CM,
 
-  4. input: 4, output: IV,
+  4. if user inputs 0's, treat that number of 0's as placeholders
 
-  5. input: 5, output: V,
+  4. interpret string of numbers as arrayed numbers. Each element indexed as 0, 1, 2, 3 to correspond with 1, 10, 100, 1000;
 
-  6. input: 6, ouput: VI,
+  5. Concatenate all outputs into total final numeral.
 
-  7. input: 9, output: IX,
+  6. input: roman numeral, output: spits back out roman numeral.
 
-  8. input: 10 - 90, output: X - XC,
-
-  9. input: roman numeral, output: spits back out roman numeral.
-
-  10. input: numbers only, output: not a number silly.
+  5. input: numbers only, output: not a number silly.
   _
 
 

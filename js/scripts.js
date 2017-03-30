@@ -7,29 +7,30 @@ var totalString = function(input){
   var inputArray = input.split("");
   console.log(inputArray);
   //inputArray = ["1","3","2","5"]
+  [1,3]
   //some code to turn stings to nums
   //inputArray = [1,3,2,5]
   inputArray = inputArray.map(function(string){
     return parseInt(string);
   });
+  inputArray.reverse();
   console.log(inputArray);
 
   for(var i=0; i < inputArray.length; i+=1){
-    if(i === 0){
-      numeralArray = ["M"];
-    }else if(i === 1){
+    if(i === 0 && inputArray[i] != 0){
+      numeralArray = ["I", "V", "X"];
+    }else if(i === 1 && inputArray[i] != 0){
+      numeralArray = ["X", "L", "C"];
+    }else if(i === 2 && inputArray[i] != 0){
       numeralArray = ["C","D","M"];
-    }else if(i === 2){
-       numeralArray = ["X", "L", "C"]
-    }else if(i === 3){
-       numeralArray = ["I", "V", "X"]
+    }else if(i === 3 && inputArray[i] != 0){
+       numeralArray = ["M"];
     }
 
     totalArray.push(processString(inputArray[i], numeralArray));
-      console.log(totalArray);
   }
-
-
+  totalArray.reverse();
+  return totalArray.join("");
 }
 
 
@@ -53,18 +54,12 @@ var processString = function(input, array){
     return array[1] + array[0] + array[0] + array[0];
   } else if (input === 9) {
     return array[0] + array[2];
-  // } else if(input === 10) {
-  //   return "X"
-  } else {
+  } else if(input === 0) {
+     return "";
+   } else {
     return "INVALID INPUT";
   }
 }
-
-
-
-
-
-
 
 
 
