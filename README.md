@@ -32,7 +32,7 @@ _  1. input: 1, output: I
 
   7. input: 9, output: IX,
 
-  8. input: 10, output: X,
+  8. input: 10 - 90, output: X - XC,
 
   9. input: roman numeral, output: spits back out roman numeral.
 
