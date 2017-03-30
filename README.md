@@ -17,7 +17,10 @@ _This program allows a user to enter any number between 1 and 3999 and recieve a
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Expected Behaviour/Specs
-_ 1. input: 1, output: I
+
+_ 0. input: numbers only, output: not a number silly.
+
+  1. input: 1, output: I
 
   2. input: 2, output: II
 
@@ -33,6 +36,7 @@ _ 1. input: 1, output: I
 
   8. input: 10, output: X,
 
+  9. input: roman numeral, output: spits back out roman numeral. 
   _
 
 
