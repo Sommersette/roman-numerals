@@ -18,9 +18,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Expected Behaviour/Specs
 
-_ 0. input: numbers only, output: not a number silly.
-
-  1. input: 1, output: I
+_  1. input: 1, output: I
 
   2. input: 2, output: II
 
@@ -36,7 +34,9 @@ _ 0. input: numbers only, output: not a number silly.
 
   8. input: 10, output: X,
 
-  9. input: roman numeral, output: spits back out roman numeral. 
+  9. input: roman numeral, output: spits back out roman numeral.
+
+  10. input: numbers only, output: not a number silly.
   _
 
 
