@@ -1,20 +1,17 @@
 //back-end logic (all calculation and processing happens here)
-
 var totalString = function(input){
   var totalArray = [];
   var numeralArray = [];
   //input = "1325"
   var inputArray = input.split("");
-  console.log(inputArray);
   //inputArray = ["1","3","2","5"]
-  [1,3]
-  //some code to turn stings to nums
-  //inputArray = [1,3,2,5]
+  //code to turn stings to nums
   inputArray = inputArray.map(function(string){
     return parseInt(string);
   });
+  //inputArray = [1,3,2,5]
   inputArray.reverse();
-  console.log(inputArray);
+  //inputArray = [5,2,3,1]
 
   for(var i=0; i < inputArray.length; i+=1){
     if(i === 0 && inputArray[i] != 0){
@@ -26,16 +23,13 @@ var totalString = function(input){
     }else if(i === 3 && inputArray[i] != 0){
        numeralArray = ["M"];
     }
-
     totalArray.push(processString(inputArray[i], numeralArray));
   }
   totalArray.reverse();
   return totalArray.join("");
 }
 
-
 var processString = function(input, array){
-  //
   if (input === 1) {
     return array[0];
   } else if (input === 2) {
@@ -61,19 +55,28 @@ var processString = function(input, array){
   }
 }
 
-
+var validateInput = function(input){
+  var valid = true;
+  if (input.search(/[^1-9]/)){
+    valid = false;
+  } else if(parseInt(input) > 3999 || parseInt(input) < 1){
+    valid = false;
+  }
+  return valid;
+}
 
 //front-end logic (user-facing, only for DOM manipulation)
 $(document).ready(function(){
   $("#roman").submit(function(event){
     event.preventDefault();
     var input = $("#roman-input").val();
-
-    //pass input to back-end function
-    var processedNumeral = totalString(input);
-    //recieve processed string, and append to DOM
-
-    $("#roman-output").append("<h1> Maybe you meant this: "+processedNumeral+ ", good citizen. </h1>");
+    if(validateInput(input)){
+      //pass input to back-end function
+      var processedNumeral = totalString(input);
+      //recieve processed string, and append to DOM
+      $("#roman-output").append("<h1> Maybe you meant this: "+processedNumeral+ ", good citizen. </h1>");
+    } else {
+      $("roman-output").append("<h1>Invalid input; bad citizen.</h1>");
+    }
   });
-  // eventually return to user input.
 });
