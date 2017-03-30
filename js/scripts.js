@@ -1,25 +1,28 @@
 //back-end logic (all calculation and processing happens here)
+
+
 var processString = function(input){
+  var romNums = ["I", "V", "X"]
   if (input === 1) {
-    return "I"
+    return romNums[0];
   } else if (input === 2) {
-    return "II"
+    return romNums[0] + romNums[0];
   } else if (input === 3) {
-    return "III"
+    return romNums[0] + romNums[0] + romNums[0];
   } else if (input === 4) {
-    return "IV"
+    return romNums[0] + romNums[1];
   } else if (input === 5) {
-    return "V"
+    return romNums[1];
   } else if (input === 6) {
-    return "VI"
+    return romNums[1] + romNums[0];
   } else if (input === 7) {
-    return "VII"
+    return romNums[1] + romNums[0] + romNums[0];
   } else if (input === 8) {
-    return "VIII"
+    return romNums[1] + romNums[0] + romNums[0] + romNums[0];
   } else if (input === 9) {
-    return "IX"
-  } else if(input === 10) {
-    return "X"
+    return romNums[0] + romNums[2];
+  // } else if(input === 10) {
+  //   return "X"
   } else {
     return "INVALID INPUT";
   }
