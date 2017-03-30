@@ -57,7 +57,7 @@ var processString = function(input, array){
 
 var validateInput = function(input){
   var valid = true;
-  if (input.search(/[^1-9]/)){
+  if (input.search(/[^1-9]/) === 0){
     valid = false;
   } else if(parseInt(input) > 3999 || parseInt(input) < 1){
     valid = false;
@@ -76,7 +76,7 @@ $(document).ready(function(){
       //recieve processed string, and append to DOM
       $("#roman-output").append("<h1> Maybe you meant this: "+processedNumeral+ ", good citizen. </h1>");
     } else {
-      $("roman-output").append("<h1>Invalid input; bad citizen.</h1>");
+      $("#roman-output").append("<h1>Invalid input; Bad, citizen.</h1>");
     }
   });
 });
